@@ -59,6 +59,11 @@ const Menu = () => {
           desc: 'Versión optimizada y estructurada',
           path: '/cocreacion#storyboard-mejorado',
         },
+        {
+          title: 'Sitio Web Interactivo',
+          desc: 'Diseño web moderno (Dina Soledad Velásquez)',
+          path: '/cocreacion#sitio-web-interactivo',
+        },
       ],
     },
     {

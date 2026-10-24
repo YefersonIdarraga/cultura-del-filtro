@@ -1,18 +1,60 @@
-/* Estilos generales de la vista Home */
+/* Ajuste general del contenedor para que conviva con el banner superior */
 .home-container {
   max-width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
-  /* Aumentamos de 120px a 180px para dar espacio libre al menú flotante */
-  padding: 120px 24px 60px 24px; 
+  padding: 40px 24px 60px 24px; /* Padding superior reducido porque el banner cubre arriba */
   color: #f8fafc;
   font-family: inherit;
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima del fondo */
 }
 
-/* Cabecera */
+/* ---------------------------------------------------------------- */
+/* ESTILOS DEL BANNER DE FONDO SUPERIOR                             */
+/* ---------------------------------------------------------------- */
+.hero-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 420px; /* Altura ajustable de la franja de fondo */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 1; /* Detrás del menú flotante y del contenido */
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que cubra todo el ancho sin deformarse */
+  display: block;
+}
+
+/* Capa oscura translúcida opcional para mejorar la lectura de la cabecera */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 15, 25, 0.205) 0%,
+    rgba(11, 15, 25, 0.705) 100%
+  );
+  z-index: 2;
+}
+
+/* Cabecera (ajustada para superponerse con elegancia sobre el banner) */
 .home-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 40px auto;
+  margin: 100px auto 40px auto; /* Margen superior para despegar el título del borde superior de la pantalla */
+  position: relative;
+  z-index: 3;
+  margin-bottom: 130px;
 }
 
 .home-badge {
@@ -35,6 +77,7 @@
   color: #f8fafc;
   margin-bottom: 12px;
   letter-spacing: -0.5px;
+  text-shadow: 3px 3px #000 ;
 }
 
 .home-header p {
@@ -47,6 +90,8 @@
 .presentation-section {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
 .presentation-card {
@@ -125,7 +170,7 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* Mantiene proporción exacta de diapositiva 16:9 */
+  padding-bottom: 56.25%; 
   background: #000;
   border-radius: 16px;
   overflow: hidden;
@@ -143,8 +188,16 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-banner {
+    height: 320px;
+  }
+
+  .home-header {
+    margin-top: 80px;
+  }
+
   .home-container {
-    padding: 100px 16px 40px 16px;
+    padding: 20px 16px 40px 16px;
   }
   
   .home-header h1 {

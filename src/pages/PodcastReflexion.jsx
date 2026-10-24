@@ -10,6 +10,16 @@ const PodcastReflexion = () => {
     <>
       <Menu />
       
+      {/* Banner de fondo superior pegado totalmente al borde */}
+      <div className="hero-banner">
+        <div className="hero-overlay"></div>
+        <img 
+          src="https://sharethis-com.imgix.net/uploads/2022/10/Blog_Podcast_101322-min.png" 
+          alt="Podcast Reflexión Metacognitiva Final" 
+          className="hero-bg-image" 
+        />
+      </div>
+      
       <main className="home-container">
         {/* Cabecera de la Sección */}
         <header className="home-header">
