@@ -1,0 +1,157 @@
+/* Estilos generales de la vista Home */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Aumentamos de 120px a 180px para dar espacio libre al menú flotante */
+  padding: 120px 24px 60px 24px; 
+  color: #f8fafc;
+  font-family: inherit;
+}
+
+/* Cabecera */
+.home-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.home-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.home-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Sección de la presentación */
+.presentation-section {
+  display: flex;
+  justify-content: center;
+}
+
+.presentation-card {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.presentation-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.presentation-info h3 {
+  font-size: 1.25rem;
+  color: #f8fafc;
+  margin: 0 0 4px 0;
+}
+
+.presentation-info p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Botón de descarga */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.download-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Contenedor del Iframe */
+.embed-container {
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0b0f19;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.presentation-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Contenedor optimizado para Slides */
+.embed-container.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Mantiene proporción exacta de diapositiva 16:9 */
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-container .presentation-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 100px 16px 40px 16px;
+  }
+  
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .embed-container {
+    height: 400px;
+  }
+}
