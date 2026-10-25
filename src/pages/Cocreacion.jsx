@@ -139,7 +139,7 @@ const Cocreacion = () => {
           <div className="presentation-card">
             <div className="presentation-info">
               <h3>Sitio Web Interactivo</h3>
-              <p>Desarrollo de contenido web interactivo por Dina Soledad Velásquez González.</p>
+              <p>Desarrollo de contenido web interactivo.</p>
               
               <a 
                 href="https://www.canva.com/design/DAG57SzMEdo/0brzXdvs9nB658weF5u_VQ/view?utm_content=DAG57SzMEdo&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 

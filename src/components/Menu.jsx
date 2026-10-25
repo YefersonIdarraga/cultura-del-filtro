@@ -61,7 +61,7 @@ const Menu = () => {
         },
         {
           title: 'Sitio Web Interactivo',
-          desc: 'Diseño web moderno (Dina Soledad Velásquez)',
+          desc: 'Ajedrez Estratégico y Movimiento',
           path: '/cocreacion#sitio-web-interactivo',
         },
       ],
