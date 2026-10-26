@@ -18,9 +18,6 @@ const PodcastReflexion = () => {
           alt="Podcast Reflexión Metacognitiva Final" 
           className="hero-bg-image" 
         />
-      </div>
-      
-      <main className="home-container">
         {/* Cabecera de la Sección */}
         <header className="home-header">
           <span className="home-badge">Cierre del Proceso</span>
@@ -29,6 +26,10 @@ const PodcastReflexion = () => {
             Análisis y reflexión sobre los aprendizajes, desafíos y experiencias durante la creación de contenidos digitales y la curaduría educativa.
           </p>
         </header>
+      </div>
+      
+      <main className="home-container">
+        
 
         {/* Sección del Reproductor de Spotify */}
         <section className="presentation-section">

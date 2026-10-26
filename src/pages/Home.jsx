@@ -16,9 +16,6 @@ const Home = () => {
           alt="Curaduría Digital Educativa" 
           className="hero-bg-image" 
         />
-      </div>
-      
-      <main className="home-container">
         {/* Cabecera de la Sección */}
         <header className="home-header">
           <span className="home-badge">Módulo Educativo</span>
@@ -27,6 +24,10 @@ const Home = () => {
             Estrategias críticas para la selección, filtrado y resignificación de la información en entornos educativos.
           </p>
         </header>
+      </div>
+      
+      <main className="home-container">
+        
 
         {/* Sección de la Presentación Interactiva */}
         <section className="presentation-section">

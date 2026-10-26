@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Menu from '../components/Menu';
 import '../styles/Home.css'; // Estilos limpios y consistentes
 
 const Cocreacion = () => {
+  // Estado para controlar qué documento está abierto en el modal (null si está cerrado)
+  const [activeModalDoc, setActiveModalDoc] = useState(null);
+
+  // Lista de documentos configurados para abrirse en modal
+  const documents = [
+    {
+      id: 'doc-partida',
+      title: 'Documento de Partida (Curso TIC)',
+      description: 'Construido en el curso de enseñanza mediada por las TIC.',
+      fileUrl: '/docs/diseno-de-estrategia-de-intervencion-pedagogica-pablo-jairo-y-zohe.pdf#view=FitH',
+      downloadUrl: '/docs/diseno-de-estrategia-de-intervencion-pedagogica-pablo-jairo-y-zohe.pdf',
+    },
+    {
+      id: 'planeacion-storyboard',
+      title: 'Planeación y Storyboard de Contenido Educativo Digital',
+      description: 'Diseño pedagógico y estructura multimedia interactiva.',
+      fileUrl: '/docs/jairo-pablo-y-zohe-tced1-recursos-u2-a1-4b-recursodigital-formatoplaneacion.pdf#view=FitH',
+      downloadUrl: '/docs/jairo-pablo-y-zohe-tced1-recursos-u2-a1-4b-recursodigital-formatoplaneacion.pdf',
+    },
+    {
+      id: 'storyboard-mejorado',
+      title: 'Storyboard Mejorado',
+      description: 'Versión optimizada y estructurada del contenido educativo digital.',
+      fileUrl: '/docs/storyboard.pdf#view=FitH',
+      downloadUrl: '/docs/storyboard.pdf',
+    },
+  ];
+
   return (
     <>
       <Menu />
@@ -15,9 +43,6 @@ const Cocreacion = () => {
           alt="Cocreación y Estrategias Pedagógicas Digitales" 
           className="hero-bg-image" 
         />
-      </div>
-      
-      <main className="home-container">
         {/* Cabecera general de la sección */}
         <header className="home-header">
           <span className="home-badge">Cocreación: Ajedrez Estratégico</span>
@@ -26,114 +51,13 @@ const Cocreacion = () => {
             Desarrollo, planeación y recursos educativos digitales creados por Jairo, Pablo y Zohé.
           </p>
         </header>
+      </div>
+      
+      <main className="home-container">
+        
 
         {/* ========================================================= */}
-        {/* SECCIÓN 1: Documento de Partida                           */}
-        {/* ========================================================= */}
-        <section id="doc-partida" className="presentation-section" style={{ marginBottom: '60px' }}>
-          <div className="presentation-card">
-            <div className="presentation-info">
-              <h3>Documento de Partida (Curso TIC)</h3>
-              <p>Construido en el curso de enseñanza mediada por las TIC.</p>
-              
-              <a 
-                href="/docs/diseno-de-estrategia-de-intervencion-pedagogica-pablo-jairo-y-zohe.pdf" 
-                download 
-                className="download-btn"
-              >
-                📥 Descargar Documento (PDF)
-              </a>
-            </div>
-
-            <div className="embed-container">
-              <iframe 
-                src="/docs/diseno-de-estrategia-de-intervencion-pedagogica-pablo-jairo-y-zohe.pdf#view=FitH" 
-                title="Documento de Partida - Curso TIC"
-                className="presentation-iframe"
-              >
-                <p>
-                  Tu navegador no soporta la visualización. Puedes{' '}
-                  <a href="/docs/diseno-de-estrategia-de-intervencion-pedagogica-pablo-jairo-y-zohe.pdf">
-                    descargar el archivo aquí
-                  </a>.
-                </p>
-              </iframe>
-            </div>
-          </div>
-        </section>
-
-        {/* ========================================================= */}
-        {/* SECCIÓN 2: Planeación y Storyboard                        */}
-        {/* ========================================================= */}
-        <section id="planeacion-storyboard" className="presentation-section" style={{ marginBottom: '60px' }}>
-          <div className="presentation-card">
-            <div className="presentation-info">
-              <h3>Planeación y Storyboard de Contenido Educativo Digital</h3>
-              <p>Diseño pedagógico y estructura multimedia interactiva.</p>
-              
-              <a 
-                href="/docs/jairo-pablo-y-zohe-tced1-recursos-u2-a1-4b-recursodigital-formatoplaneacion.pdf" 
-                download 
-                className="download-btn"
-              >
-                📥 Descargar Planeación (PDF)
-              </a>
-            </div>
-
-            <div className="embed-container">
-              <iframe 
-                src="/docs/jairo-pablo-y-zohe-tced1-recursos-u2-a1-4b-recursodigital-formatoplaneacion.pdf#view=FitH" 
-                title="Planeación y Storyboard de Contenido Educativo Digital"
-                className="presentation-iframe"
-              >
-                <p>
-                  Tu navegador no soporta la visualización. Puedes{' '}
-                  <a href="/docs/jairo-pablo-y-zohe-tced1-recursos-u2-a1-4b-recursodigital-formatoplaneacion.pdf">
-                    descargar el archivo aquí
-                  </a>.
-                </p>
-              </iframe>
-            </div>
-          </div>
-        </section>
-
-        {/* ========================================================= */}
-        {/* SECCIÓN 3: Storyboard Mejorado                            */}
-        {/* ========================================================= */}
-        <section id="storyboard-mejorado" className="presentation-section" style={{ marginBottom: '60px' }}>
-          <div className="presentation-card">
-            <div className="presentation-info">
-              <h3>Storyboard Mejorado</h3>
-              <p>Versión optimizada y estructurada del contenido educativo digital.</p>
-              
-              <a 
-                href="/docs/storyboard.pdf" 
-                download 
-                className="download-btn"
-              >
-                📥 Descargar Storyboard Mejorado (PDF)
-              </a>
-            </div>
-
-            <div className="embed-container">
-              <iframe 
-                src="/docs/storyboard.pdf#view=FitH" 
-                title="Storyboard Mejorado"
-                className="presentation-iframe"
-              >
-                <p>
-                  Tu navegador no soporta la visualización. Puedes{' '}
-                  <a href="/docs/storyboard.pdf">
-                    descargar el archivo aquí
-                  </a>.
-                </p>
-              </iframe>
-            </div>
-          </div>
-        </section>
-
-        {/* ========================================================= */}
-        {/* SECCIÓN 4: Sitio Web Interactivo (Canva)                  */}
+        {/* SECCIÓN 1: Sitio Web Interactivo (Canva) - Queda igual    */}
         {/* ========================================================= */}
         <section id="sitio-web-interactivo" className="presentation-section">
           <div className="presentation-card">
@@ -151,7 +75,6 @@ const Cocreacion = () => {
               </a>
             </div>
 
-            {/* Contenedor adaptado para el iframe de Canva con estilos coherentes */}
             <div className="embed-container" style={{ height: '700px' }}>
               <iframe 
                 loading="lazy" 
@@ -171,7 +94,73 @@ const Cocreacion = () => {
             </div>
           </div>
         </section>
+
+        {/* ========================================================= */}
+        {/* SECCIONES DE DOCUMENTOS CON BOTÓN MODAL                    */}
+        {/* ========================================================= */}
+        {documents.map((doc) => (
+          <section key={doc.id} id={doc.id} className="presentation-section" style={{ marginBottom: '60px' }}>
+            <div className="presentation-card">
+              <div className="presentation-info" style={{ borderBottom: 'none', marginBottom: 0, paddingBottom: 0 }}>
+                <div>
+                  <h3>{doc.title}</h3>
+                  <p>{doc.description}</p>
+                </div>
+                
+                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                  {/* Botón para abrir el visor en Modal */}
+                  <button 
+                    onClick={() => setActiveModalDoc(doc)}
+                    className="download-btn"
+                    style={{ cursor: 'pointer', border: 'none' }}
+                  >
+                    👁️ Ver Documento
+                  </button>
+
+                  <a 
+                    href={doc.downloadUrl} 
+                    download 
+                    className="download-btn"
+                  >
+                    📥 Descargar (PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        ))}
       </main>
+
+      {/* ========================================================= */}
+      {/* VENTANA MODAL PARA LOS VISORES PDF                        */}
+      {/* ========================================================= */}
+      {activeModalDoc && (
+        <div className="modal-overlay" onClick={() => setActiveModalDoc(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>{activeModalDoc.title}</h3>
+              <button 
+                className="modal-close-btn"
+                onClick={() => setActiveModalDoc(null)}
+              >
+                ✕
+              </button>
+            </div>
+            <div className="modal-body">
+              <iframe 
+                src={activeModalDoc.fileUrl} 
+                title={activeModalDoc.title}
+                className="modal-iframe"
+              >
+                <p>
+                  Tu navegador no soporta la visualización. Puedes{' '}
+                  <a href={activeModalDoc.downloadUrl}>descargar el archivo aquí</a>.
+                </p>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

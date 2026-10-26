@@ -43,28 +43,28 @@ const Menu = () => {
       id: 'cocreacion',
       title: 'Cocreación: Ajedrez Estratégico y movimiento',
       path: '/cocreacion',
-      submenu: [
-        {
-          title: 'Documento de Partida (Curso TIC)',
-          desc: 'Construido en el curso de enseñanza mediada por las TIC',
-          path: '/cocreacion',
-        },
-        {
-          title: 'Planeación y Storyboard',
-          desc: 'Diseño pedagógico del contenido educativo digital',
-          path: '/cocreacion#planeacion-storyboard',
-        },
-        {
-          title: 'Storyboard mejorado',
-          desc: 'Versión optimizada y estructurada',
-          path: '/cocreacion#storyboard-mejorado',
-        },
-        {
-          title: 'Sitio Web Interactivo',
-          desc: 'Ajedrez Estratégico y Movimiento',
-          path: '/cocreacion#sitio-web-interactivo',
-        },
-      ],
+      // submenu: [
+      //   {
+      //     title: 'Documento de Partida (Curso TIC)',
+      //     desc: 'Construido en el curso de enseñanza mediada por las TIC',
+      //     path: '/cocreacion',
+      //   },
+      //   {
+      //     title: 'Planeación y Storyboard',
+      //     desc: 'Diseño pedagógico del contenido educativo digital',
+      //     path: '/cocreacion#planeacion-storyboard',
+      //   },
+      //   {
+      //     title: 'Storyboard mejorado',
+      //     desc: 'Versión optimizada y estructurada',
+      //     path: '/cocreacion#storyboard-mejorado',
+      //   },
+      //   {
+      //     title: 'Sitio Web Interactivo',
+      //     desc: 'Ajedrez Estratégico y Movimiento',
+      //     path: '/cocreacion#sitio-web-interactivo',
+      //   },
+      // ],
     },
     {
       id: 'podcast',
